@@ -1,0 +1,20 @@
+library(psych)
+summary(ambiente$año)
+summary(ambiente$co2Totales)
+table(ambiente$co2Totales)
+hist(ambiente$co2Totales)
+table(ambiente$año)
+plot.default(ambiente$año, ambiente$co2Totales)
+quantile(ambiente$co2Totales)
+bloxplot(ambiente$co2Totales)
+
+library(tidyverse)
+table(ambiente$año)
+v1<-(ambiente$año)
+v2<-(ambiente$co2Totales)
+plot.default(ambiente$año, ambiente$co2Totales)
+l1= lm(v2~v1)
+abline(l1)
+l1
+summary(l1)
+
